@@ -1,0 +1,25 @@
+.header-item-line1 {
+    animation: line1 100ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.header-item-line2 {
+    animation: line2 100ms ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes line1 {
+    100% {
+        transform: rotate(45deg) translateY(6px);
+        width: 25px;
+        margin-left: 4px;
+    }
+}
+
+@keyframes line2 {
+    100% {
+        transform: rotate(-45deg) translateY(-6px);
+        width: 25px;
+        margin-left: 4px;
+    }
+}
