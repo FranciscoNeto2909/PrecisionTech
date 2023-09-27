@@ -12,7 +12,7 @@ export default function MobileH({ windowWidth }: Props) {
     const [menuOpened, setMenuOpened] = useState(false)
 
     return (
-        <div className={`h-min-[68px] ${menuOpened && "h-screen fixed top-0 bottom-0 left-0 right-0 z-20 bg-white"} 
+        <div className={`h-min-[70px] shadow-md ${menuOpened && "h-screen fixed top-0 bottom-0 left-0 right-0 z-20 bg-white"} 
         flex flex-col py-2 border-b`}>
             <div className='flex items-center justify-between'>
                 <div className='ms-4 bg-blue-600 rounded-md px-2'>
