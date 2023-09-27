@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import logo from "../../../assets/logo.png"
-import logoMobile from "../../../assets/logoMobile.png"
+import logo from "../../../images/logo.png"
+import logoMobile from "../../../images/logoMobile.png"
 import { Link } from 'react-router-dom'
 import "./mobileH.css"
 
@@ -17,7 +17,7 @@ export default function MobileH({ windowWidth }: Props) {
             <div className='flex items-center justify-between'>
                 <div className='ms-4'>
                     <Link to="/">
-                        <img src={windowWidth <= 425 ? logoMobile : logo} className={`${windowWidth <= 425 ? "h-14 py-2" : "h-16 py-1"}`} alt="logo" />
+                        <img src={windowWidth <= 425 ? logoMobile : logo} className={`${windowWidth <= 425 ? "h-14 py-2 bg-blue-600 rounded-md px-2" : "h-16 py-1"}`} alt="logo" />
                     </Link>
                 </div>
                 <div className="me-4 h-[28px] w-[28px] flex flex-col justify-center gap-[6px] cursor-pointer" onClick={() => setMenuOpened(!menuOpened)}>

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
-import logo from "../../../assets/logo.png"
+import logo from "../../../images/logo.png"
 
 export default function DesktopH() {
     return (
-        <div className="h-[70px] p-2 shadow">
+        <div className="h-[70px] w-screen p-2 shadow fixed top-0 z-20">
             <div className="max-w-[1250px] mx-auto flex justify-between items-center">
                 <div className="px-2">
                     <Link to="/">
