@@ -99,13 +99,13 @@ export default function Home() {
                     <div className='flex-1'>
                         <h2 className='text-blue-950 text-2xl font-bold my-6 sm:text-3xl lg:text-4xl lg:mb-10 bg-transparent'>Um portifólio com diversos  projetos
                         </h2>
-                        <p className='text-[17px] max-w-[500px] sm:text-lg lg:max-w-none lg:text-2xl'>Com um design inovador, estas válvulas de titânio foram meticulosamente desenvolvidas para se ajustarem perfeitamente aos novos foguetes da NASA. O cuidado minucioso com cada detalhe permitiu a integração precisa dessas válvulas nos sistemas das espaçonaves, atendendo aos mais elevados padrões de engenharia e performance exigidos pela agência espacial.</p>
+                        <p className='text-[17px] max-w-[500px] sm:text-lg lg:max-w-none lg:text-2xl'>Com um design inovador, estas válvulas de titânio foram desenvolvidas para os novos foguetes da NASA. com cortes precisos e detalhes milimétricos, atendeu aos mais elevados padrões de engenharia e performance exigidos pela agência espacial.</p>
                         <div className='mt-2'>
                             <Link to="/projetos" className='text-blue-600 font-bold'>Mais projetos...</Link>
                         </div>
                     </div>
                     <div className='flex-1 flex justify-center'>
-                        <img className='h-72 lg:h-80' src={valvulas} alt="" />
+                        <img className='h-60 md:h72 lg:h-80' src={valvulas} alt="" />
                     </div>
                 </div>
             </section>
