@@ -3,6 +3,7 @@ import DesktopH from "./components/headers/desktop/DesktopH";
 import MobileH from "./components/headers/mobile/MobileH";
 import Home from "./pages/home/Home";
 import { useState, useEffect } from "react";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -13,13 +14,14 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <div>
+    <>
       {windowWidth < 992 ?
         <MobileH windowWidth={windowWidth} /> : <DesktopH />
       }
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </div>
+      <Footer />
+    </>
   )
 }

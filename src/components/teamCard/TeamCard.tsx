@@ -15,7 +15,7 @@ export default function TeamCard({ person, key }: propsType) {
                         {person.position}
                     </h5>
                 </div>
-                <p className="max-h-[100px] text-xs text-ellipsis overflow-hidden md:mb-5 text-[#47718b] bg-white">
+                <p className="max-h-[100px] text-xs overflow-hidden text-[#47718b] bg-white lg:text-sm">
                     <span className="bg-white text-sm font-bold block text-blue-950">Qualificações:</span>
                     {person.qualifications}
                 </p>
