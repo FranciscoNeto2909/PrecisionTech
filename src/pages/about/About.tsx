@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div>
+        <div className="mt-20">
             <p>A PrecisionTech: Transformando Precisão em Realidade
 
                 Na vanguarda da indústria de usinagem e torneamento, encontra-se a PrecisionTech, uma empresa que tem sido sinônimo de excelência e precisão desde sua fundação. Com décadas de experiência e um compromisso inabalável com a qualidade, a PrecisionTech se destacou como uma líder indiscutível no mercado de torneamento de peças de alta precisão.

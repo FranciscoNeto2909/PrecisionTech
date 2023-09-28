@@ -11,6 +11,9 @@ type Props = {
 export default function MobileH({ windowWidth }: Props) {
     const [menuOpened, setMenuOpened] = useState(false)
 
+    function handleClick() {
+        setMenuOpened(false)
+    }
     return (
         <div className={`bg-[#fafafa] h-min-[70px] shadow-md fixed top-0 z-10 w-full ${menuOpened && "h-screen fixed top-0 bottom-0 left-0 right-0 z-20"} 
         flex flex-col py-2 border-b`}>
@@ -30,23 +33,23 @@ export default function MobileH({ windowWidth }: Props) {
                 <div className='p-4 w-full'>
                     <nav>
                         <ul>
-                            <li className='py-6 text-xl font-bold border-b'>
-                                <Link className='text-[#0b3558]' to={"/"}>Sobre</Link>
+                            <li className=' text-xl font-bold border-b'>
+                                <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/sobre"}>Sobre</Link>
                             </li>
-                            <li className='py-6 text-xl font-bold border-b'>
-                                <Link className='text-[#0b3558]' to={"/serviços"}>Serviços</Link>
+                            <li className=' text-xl font-bold border-b'>
+                                <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/serviços"}>Serviços</Link>
                             </li>
-                            <li className='py-6 text-xl font-bold border-b'>
-                                <Link className='text-[#0b3558]' to={"/projetos"}>Projetos</Link>
+                            <li className='text-xl font-bold border-b'>
+                                <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/projetos"}>Projetos</Link>
                             </li>
-                            <li className='py-6 text-xl font-bold border-b'>
-                                <Link className='text-[#0b3558]' to={"/agendamentos"}>Agendamentos</Link>
+                            <li className=' text-xl font-bold border-b'>
+                                <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/agendamentos"}>Agendamentos</Link>
                             </li>
-                            <li className='py-6 text-xl font-bold border-b'>
-                                <Link className='text-[#0b3558]' to={"/blog"}>Blog</Link>
+                            <li className=' text-xl font-bold border-b'>
+                                <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/blog"}>Blog</Link>
                             </li>
-                            <li className='py-6 text-xl font-bold border-b'>
-                                <Link className="text-[#0b3558] font-bold" to="/contato">Contato</Link>
+                            <li className=' text-xl font-bold border-b'>
+                                <Link onClick={handleClick} className="py-6 block text-[#0b3558] font-bold" to="/contato">Contato</Link>
                             </li>
                         </ul>
                     </nav>
