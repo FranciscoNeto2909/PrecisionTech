@@ -37,8 +37,7 @@ export default function DesktopH() {
                         </ul>
                     </nav>
                 </div>
-                <div className="text-center">
-                    <Link to="/comentar" className="font-bold rounded-md p-2 text-blue-700 border-2 border-blue-600">Comentar</Link>
+                <div className="text-center w-28">
                 </div>
             </div>
         </div>
