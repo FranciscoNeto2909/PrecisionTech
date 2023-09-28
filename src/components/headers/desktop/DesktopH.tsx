@@ -26,9 +26,6 @@ export default function DesktopH() {
                                 <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/agendamentos">Agendamentos</Link>
                             </li>
                             <li>
-                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/agendamentos">Comentarios</Link>
-                            </li>
-                            <li>
                                 <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/blog">Blog</Link>
                             </li>
                             <li>
