@@ -14,7 +14,7 @@ export default function DesktopH() {
                     <nav>
                         <ul className="flex gap-8">
                             <li>
-                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/agendamentos">Agendamentos</Link>
+                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/sobre">Sobre</Link>
                             </li>
                             <li>
                                 <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/servicos">Serviços</Link>
@@ -23,18 +23,21 @@ export default function DesktopH() {
                                 <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/projetos">Projetos</Link>
                             </li>
                             <li>
-                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/contato">Contato</Link>
+                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/agendamentos">Agendamentos</Link>
+                            </li>
+                            <li>
+                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/agendamentos">Comentarios</Link>
                             </li>
                             <li>
                                 <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/blog">Blog</Link>
                             </li>
                             <li>
-                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/sobre">Sobre</Link>
+                                <Link className="text-[#0b3558] font-bold hover:text-blue-800" to="/contato">Contato</Link>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <div className="w-[200px] text-center">
+                <div className="text-center">
                     <Link to="/comentar" className="font-bold rounded-md p-2 text-blue-700 border-2 border-blue-600">Comentar</Link>
                 </div>
             </div>

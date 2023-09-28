@@ -14,7 +14,7 @@ export default function Home() {
     }, [])
     return (
         <>
-            <section className='bg-white pb-6 py-4 lg:h-screen lg:pb-8 lg:pt-24' data-aos="fade-in" data-aos-duration="2000">
+            <section className='bg-white pt-24 pb-6 lg:h-screen lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
                 <div className="bg-white mx-auto max-w-[1250px] p-4 flex flex-col-reverse items-center lg:px-6 lg:flex-row">
                     <div className='bg-white flex-1 self-start lg:mt-4'>
                         <h1 className='bg-white text-blue-950 text-[23px] font-bold sm:text-4xl lg:text-5xl'>Agendamento facil e rapido</h1>
@@ -25,7 +25,7 @@ export default function Home() {
                         <Link to="/agendamento" className='w-full text-lg text-center inline-block bg-blue-600 mt-4 text-white py-4 px-2 rounded-md sm:w-auto'>Agendar agora</Link>
                     </div>
                     <div className='bg-white flex-1 flex justify-end'>
-                        <img className='mb-8 h-60 rounded-md lg:mb-0 lg:h-96' src={torneadora} alt="" />
+                        <img className='mb-8 h-52 rounded-md md:h-60 lg:mb-0 lg:h-96' src={torneadora} alt="" />
                     </div>
                 </div>
             </section >
@@ -89,7 +89,7 @@ export default function Home() {
                                 <Link to="/comentarios" className='text-blue-600 font-bold'>Mais comentarios...</Link>
                             </div>
                         </div>
-                        <img src={piloto} className='animate-move h-72 w-72 rounded-full' alt="" />
+                        <img src={piloto} className='animate-move h-64 w-64 sm:h-72 sm:w-72 rounded-full' alt="" />
                     </div>
                 </div>
             </section>
