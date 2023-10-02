@@ -49,7 +49,7 @@ export default function Home() {
                                     Compromissados com a qualidade e a excelência de nossas peças.
                                 </li>
                             </ul>
-                            <Link className='inline-block p-2 mt-3 rounded-md text-sm text-blue-600 font-bold lg:text-base' to="/serviços">Saiba mais...</Link>
+                            <Link className='inline-block p-2 mt-3 rounded-md text-sm text-blue-600 font-bold lg:text-base' to="/servicos">Saiba mais...</Link>
                         </div>
                     </div>
                 </div>
