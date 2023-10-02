@@ -19,10 +19,10 @@ export default function Home() {
                         <div className='bg-white mt-4 mb-6'>
                             <p className='bg-white text-[#47718b] text-[16px] max-w-[550px]'>A PrecisionTech é uma empresa especializada em serviços de torneamento de precisão. Forneçemos peças de alta qualidade para uma variedade de indústrias, desde automobilísmo até aeroespacial. </p>
                         </div>
-                        <Link to="/agendamento" className='w-full text-lg text-center inline-block bg-blue-600 mt-4 text-white py-4 px-2 rounded-md sm:w-auto'>Agendar agora</Link>
+                        <Link to="/agendamento" className='w-full text-lg text-center inline-block bg-blue-600 mt-2 text-white py-4 px-2 rounded-md sm:w-auto'>Agendar agora</Link>
                     </div>
                     <div className='bg-white flex-1 flex justify-end'>
-                        <img className='mb-8 h-52 rounded-md md:h-60 lg:mb-0 lg:h-96' src={torneadora} alt="" />
+                        <img className='h-48 rounded-md md:h-60 lg:h-96' src={torneadora} alt="" />
                     </div>
                 </div>
             </section >
