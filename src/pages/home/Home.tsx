@@ -1,21 +1,17 @@
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import torneadora from "../../images/torneadora.jpg"
 import trabalhador from "../../images/trabalhador.jpg"
 import piloto from "../../images/piloto.jpg"
-import { team } from '../../data/team'
 import TeamCard from '../../components/teamCard/TeamCard'
 import valvulas from "../../images/peças.png"
+import { team } from '../../data/team'
+
 
 export default function Home() {
-    useEffect(() => {
-        AOS.init()
-    }, [])
+
     return (
         <>
-            <section className='bg-white pt-24 pb-6 md:h-screen lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
+            <section className='bg-white pt-16 pb-6 md:pt-24 md:h-screen lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
                 <div className="bg-white mx-auto max-w-[1250px] p-4 flex flex-col-reverse items-center lg:px-6 lg:flex-row">
                     <div className='bg-white flex-1 self-start lg:mt-4'>
                         <h1 className='bg-white text-blue-950 text-[23px] font-bold sm:text-4xl lg:text-5xl'>Agendamento facil e rapido</h1>
@@ -99,7 +95,7 @@ export default function Home() {
                     <div className='flex-1'>
                         <h2 className='text-blue-950 text-2xl font-bold my-6 sm:text-3xl lg:text-4xl lg:mb-10 bg-transparent'>Um portifólio com diversos  projetos
                         </h2>
-                        <p className='text-[17px] max-w-[500px] sm:text-lg lg:max-w-none lg:text-2xl'>Com um design inovador, estas válvulas de titânio foram desenvolvidas para os novos foguetes da NASA. com cortes precisos e detalhes milimétricos, atendeu aos mais elevados padrões de engenharia e performance exigidos pela agência espacial.</p>
+                        <p className='text-[17px] max-w-[500px] sm:text-lg lg:max-w-none lg:text-2xl'>Com um design inovador, estas válvulas de superliga de níquel foram desenvolvidas para os novos foguetes da NASA. com cortes precisos e detalhes milimétricos, atendeu aos mais elevados padrões de engenharia e performance exigidos pela agência espacial.</p>
                         <div className='mt-2'>
                             <Link to="/projetos" className='text-blue-600 font-bold'>Mais projetos...</Link>
                         </div>

@@ -1,13 +1,12 @@
 import { TeamType } from "../../data/team";
 
 type propsType = {
-    person: TeamType,
-    key: number
+    person: TeamType
 }
 
-export default function TeamCard({ person, key }: propsType) {
+export default function TeamCard({ person }: propsType) {
     return (
-        <div className='bg-white h-48 flex-1 min-w-[300px] flex justify-between items-center card-shadow p-2 rounded-md overflow-hidden sm:px-4 md:min-w-[400px] sm:mx-auto lg:max-w-none lg:h-[178px]' key={key}>
+        <div className='bg-white h-48 flex-1 min-w-[300px] flex justify-between items-center card-shadow p-2 rounded-md overflow-hidden sm:px-4 md:min-w-[400px] sm:mx-auto lg:max-w-none lg:h-[178px]'>
             <div className='bg-white w-2/3 flex flex-col justify-between'>
                 <div className="bg-white">
                     <h3 className='bg-white text-xl font-bold text-blue-950'>{person.name}</h3>

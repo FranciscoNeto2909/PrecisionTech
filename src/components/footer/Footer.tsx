@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
-        <div className="border-t h-20">
-            <div className="mx-auto max-w-[1250px] text-center px-4 pt-8 flex flex-col items-center gap-8 py-4 justify-between md:flex-row">
+        <div className="border-t h-16">
+            <div className="mx-auto max-w-[1250px] text-center px-4 pt-5 flex flex-col items-center gap-8 py-4 justify-between md:flex-row">
                 <div className='text-sm lg:text-base'>Copyright PrecisionTech 2023</div>
                 <div>
                     <ul className="flex gap-2 text-sm lg:text-base lg:gap-6">

@@ -13,15 +13,19 @@ import Services from "./pages/services/Services";
 import Team from "./pages/team/Team";
 import Contact from "./pages/contact/Contact";
 import NotFound from "./pages/NotFound";
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       {windowWidth < 992 ?
@@ -34,7 +38,7 @@ export default function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contato" element={<Contact />} />
         <Route path="/projetos" element={<Projects />} />
-        <Route path="/serviços" element={<Services />} />
+        <Route path="/servicos" element={<Services windowWidth={windowWidth} />} />
         <Route path="/sobre" element={<About />} />
         <Route path="/time" element={<Team />} />
         <Route path="/*" element={<NotFound />} />
