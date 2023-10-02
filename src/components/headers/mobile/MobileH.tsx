@@ -37,7 +37,7 @@ export default function MobileH({ windowWidth }: Props) {
                                 <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/sobre"}>Sobre</Link>
                             </li>
                             <li className=' text-xl font-bold border-b'>
-                                <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/serviços"}>Serviços</Link>
+                                <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/servicos"}>Serviços</Link>
                             </li>
                             <li className='text-xl font-bold border-b'>
                                 <Link onClick={handleClick} className='py-6 block text-[#0b3558]' to={"/projetos"}>Projetos</Link>
