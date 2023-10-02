@@ -11,7 +11,7 @@ export default function Services({ windowWidth }: Props) {
         <div className="mt-16">
             <div className="mx-auto max-w-[1250px] py-4 px-1 lg:px-6">
                 <section className="lg:mb-10">
-                    <h2 className='text-blue-950 text-3xl font-bold mb-6 lg:text-4xl  bg-transparent'>Serviços
+                    <h2 className='text-blue-950 text-3xl font-bold mb-6 lg:text-4xl bg-transparent'>Serviços
                     </h2>
                     <div className="flex flex-wrap gap-4 items-start justify-center xl:justify-start">
                         {
