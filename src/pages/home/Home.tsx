@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <>
-            <section className='bg-white pt-16 pb-6 md:pt-24 md:h-screen lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
+            <section className='bg-white h-screen pt-16 pb-6 md:pt-24 lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
                 <div className="bg-white mx-auto max-w-[1250px] p-4 flex flex-col-reverse items-center lg:px-6 lg:flex-row">
                     <div className='bg-white flex-1 self-start lg:mt-4'>
                         <h1 className='bg-white text-blue-950 text-[23px] font-bold sm:text-4xl lg:text-5xl'>Agendamento facil e rapido</h1>
@@ -36,16 +36,16 @@ export default function Home() {
                         </div>
                         <div>
                             <ul>
-                                <li className='text-[#47718b] py-3 border-b lg:max-w-[500px] lg:text-lg'>
+                                <li className='text-[#47718b] text-xs py-3 border-b md:text-base lg:max-w-[500px] lg:text-lg'>
                                     Especializados em uma ampla gama de materiais e serviços.
                                 </li>
-                                <li className='text-[#47718b] py-3 border-b lg:max-w-[500px] lg:text-lg'>
+                                <li className='text-[#47718b] text-xs py-3 border-b md:text-base lg:max-w-[500px] lg:text-lg'>
                                     Atendendemos às necessidades diversas de nossos clientes com precisão incomparável.
                                 </li>
-                                <li className='text-[#47718b] py-3 border-b lg:max-w-[500px] lg:text-lg'>
+                                <li className='text-[#47718b] text-xs py-3 border-b md:text-base lg:max-w-[500px] lg:text-lg'>
                                     Nossos serviços abrangem desde o torneamento de peças simples até projetos altamente complexos.
                                 </li>
-                                <li className='text-[#47718b] py-3 border-b lg:max-w-[500px] lg:text-lg'>
+                                <li className='text-[#47718b] text-xs py-3 border-b md:text-base lg:max-w-[500px] lg:text-lg'>
                                     Compromissados com a qualidade e a excelência de nossas peças.
                                 </li>
                             </ul>
