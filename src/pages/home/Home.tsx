@@ -14,10 +14,10 @@ export default function Home() {
             <section className='bg-white h-screen mt-[70px] pb-6 md:pt-24 lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
                 <div className="bg-white mx-auto max-w-[1250px] p-4 flex flex-col-reverse items-center lg:px-6 lg:flex-row">
                     <div className='bg-white flex-1 self-start lg:mt-4'>
-                        <h1 className='bg-white text-blue-950 text-[23px] font-bold sm:text-4xl lg:text-5xl'>Agendamento facil e rapido</h1>
+                        <h1 className='bg-white text-blue-950 text-[23px] font-bold sm:text-4xl lg:text-5xl'>Agendamento fácil e rapido</h1>
                         <p className='bg-white text-blue-600 text-[18px] font-bold mt-2 sm:text-2xl lg:text-3xl lg:mt-4'>Referência em torneamento de precisão</p>
                         <div className='bg-white mt-4 mb-6'>
-                            <p className='bg-white text-[#47718b] text-[16px] max-w-[550px]'>A PrecisionTech é uma empresa especializada em serviços de torneamento de precisão. Forneçemos peças de alta qualidade para uma variedade de indústrias, desde automobilísmo até aeroespacial. </p>
+                            <p className='bg-white text-[#47718b] text-[16px] max-w-[550px]'>A PrecisionTech é uma empresa especializada em serviços de torneamento de precisão. Fornecemos peças de alta qualidade para uma variedade de indústrias, desde automobilísmo até aeroespacial. </p>
                         </div>
                         <Link to="/agendamento" className='w-full text-lg text-center inline-block bg-blue-600 mt-2 text-white py-4 px-2 rounded-md sm:w-auto'>Agendar agora</Link>
                     </div>
@@ -40,7 +40,7 @@ export default function Home() {
                                     Especializados em uma ampla gama de materiais e serviços.
                                 </li>
                                 <li className='text-[#47718b] text-xs py-3 border-b md:text-base lg:max-w-[500px] lg:text-lg'>
-                                    Atendendemos às necessidades diversas de nossos clientes com precisão incomparável.
+                                    Atendemos às necessidades diversas de nossos clientes com precisão incomparável.
                                 </li>
                                 <li className='text-[#47718b] text-xs py-3 border-b md:text-base lg:max-w-[500px] lg:text-lg'>
                                     Nossos serviços abrangem desde o torneamento de peças simples até projetos altamente complexos.
@@ -66,7 +66,7 @@ export default function Home() {
                         ))}
                     </div>
                     <div>
-                        <p className='text-[#47718b] text-center mt-4 text-sm sm:text-base'>Agradeçemos profundamente o talento e a dedicação de nossa equipe, pois são eles que tornam possível a nossa liderança na indústria de usinagem de alta precisão.</p>
+                        <p className='text-[#47718b] text-center mt-4 text-sm sm:text-base'>Agradecemos profundamente o talento e a dedicação de nossa equipe, pois são eles que tornam possível a nossa liderança na indústria de usinagem de alta precisão.</p>
                     </div>
                 </div>
             </section>
