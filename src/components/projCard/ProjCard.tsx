@@ -13,7 +13,7 @@ type ProjProps = {
 
 export default function ProjCard({ proj, windowWidth }: ProjProps) {
     return (
-        <div data-aos={windowWidth < 400 ? "fade-up" : "fade-in"} data-aos-duration="2000" className="w-full max-w-[350px] card-shadow rounded-lg  lg:max-w-[400px]">
+        <div data-aos={windowWidth < 400 ? "fade-up" : "fade-in"} data-aos-duration="2000" className="w-full max-w-[350px] card-shadow rounded-lg lg:max-w-[400px]">
             <div>
                 <img className="h-auto w-full rounded-t-lg lg:h-[360px]" src={proj.image} alt="" />
             </div>

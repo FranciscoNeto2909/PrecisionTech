@@ -10,7 +10,6 @@ import Projects from "./pages/projects/Projects";
 import Scheduling from "./pages/scheduling/Scheduling";
 import Schedules from "./pages/schedules/Schedules";
 import Services from "./pages/services/Services";
-import Team from "./pages/team/Team";
 import Contact from "./pages/contact/Contact";
 import NotFound from "./pages/NotFound";
 import AOS from 'aos'
@@ -40,7 +39,6 @@ export default function App() {
         <Route path="/projetos" element={<Projects windowWidth={windowWidth} />} />
         <Route path="/servicos" element={<Services windowWidth={windowWidth} />} />
         <Route path="/sobre" element={<About />} />
-        <Route path="/time" element={<Team />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
       <Footer />

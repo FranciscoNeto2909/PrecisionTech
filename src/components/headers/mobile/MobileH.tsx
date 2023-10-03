@@ -19,7 +19,7 @@ export default function MobileH({ windowWidth }: Props) {
         flex flex-col py-2 border-b`}>
             <div className='flex items-center justify-between'>
                 <div className='ms-4'>
-                    <Link to="/">
+                    <Link to="/" onClick={handleClick}>
                         <img src={windowWidth <= 425 ? logoMobile : logo} className={`${windowWidth <= 425 ? "h-12 py-2 bg-blue-600 rounded-md px-2" : "h-16 py-1"}`} alt="logo" />
                     </Link>
                 </div>
