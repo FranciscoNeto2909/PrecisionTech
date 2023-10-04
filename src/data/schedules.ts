@@ -21,7 +21,7 @@ export const schedules = [
     },
     {
         client: "Jose Silva",
-        date: "13/10/2023",
+        date: "13/11/2023",
         service: "Montagem e Inspeção"
     }
 ]
