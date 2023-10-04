@@ -15,7 +15,7 @@ export default function MobileH({ windowWidth }: Props) {
         setMenuOpened(false)
     }
     return (
-        <div className={`bg-[#fafafa] h-min-[70px] shadow-md sticky top-0 z-10 w-full ${menuOpened && "h-screen fixed top-0 bottom-0 left-0 right-0 z-20"} 
+        <div className={`bg-[#fafafa] h-[70px] shadow-md sticky top-0 z-10 w-full ${menuOpened && "h-screen fixed top-0 bottom-0 left-0 right-0 z-20"} 
         flex flex-col py-2 border-b`}>
             <div className='flex items-center justify-between'>
                 <div className='ms-4'>
