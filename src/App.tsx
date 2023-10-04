@@ -34,7 +34,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/agendamento" element={<Scheduling />} />
         <Route path="/agendamentos" element={<Schedules />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={<Blog windowWidth={windowWidth} />} />
         <Route path="/contato" element={<Contact />} />
         <Route path="/projetos" element={<Projects windowWidth={windowWidth} />} />
         <Route path="/servicos" element={<Services windowWidth={windowWidth} />} />
