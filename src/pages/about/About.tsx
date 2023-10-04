@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <div className="mt-20">
+        <div className="">
             <div className="mx-auto max-w-[1250px] min-h-[78vh] p-4 lg:px-6">
                 <p>A PrecisionTech: Transformando Precisão em Realidade
 

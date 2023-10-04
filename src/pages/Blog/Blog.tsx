@@ -7,7 +7,7 @@ type Props = {
 
 export default function Blog({ windowWidth }: Props) {
     return (
-        <div className="mt-20">
+        <div className=" min-h-[72vh] my-4">
             <div className="mx-auto max-w-[1250px] lg:px-6">
                 <div className="px-1 flex justify-center flex-wrap gap-4 md:px-0 lg:mt-8">
                     {

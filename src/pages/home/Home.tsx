@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <>
-            <section className='bg-white h-screen mt-[70px] pb-6 md:pt-24 lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
+            <section className='bg-white h-screen pb-6 md:pt-24 lg:pb-8' data-aos="fade-in" data-aos-duration="2000">
                 <div className="bg-white mx-auto max-w-[1250px] p-4 flex flex-col-reverse items-center lg:px-6 lg:flex-row">
                     <div className='bg-white flex-1 self-start lg:mt-4'>
                         <h1 className='bg-white text-blue-950 text-[23px] font-bold sm:text-4xl lg:text-5xl'>Agendamento fácil e rapido</h1>
@@ -83,7 +83,7 @@ export default function Home() {
                                 <p className='text-sm'>Três vezes campeão em monaco, CEO da FastRacers, US</p>
                             </div>
                             <div className='mt-2'>
-                                <Link to="/comentarios" className='text-blue-600 font-bold'>Mais comentarios...</Link>
+                                <Link to="/blog" className='text-blue-600 font-bold'>Mais comentarios...</Link>
                             </div>
                         </div>
                         <img src={piloto} className='animate-move h-64 w-64 sm:h-72 sm:w-72 rounded-full' alt="" />

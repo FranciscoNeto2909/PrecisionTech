@@ -9,11 +9,12 @@
   background: #fafafa;
 }
 
-#root {
+body {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+#root{
+  min-height: 100vh;
+  display: grid;
 }
 
 .card-shadow {

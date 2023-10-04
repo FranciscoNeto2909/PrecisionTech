@@ -7,7 +7,7 @@ type Props = {
 
 export default function Projects({ windowWidth }: Props) {
     return (
-        <div className="mt-20">
+        <div className="">
             <div className="mx-auto max-w-[1250px] py-4 px-1 lg:px-6">
                 <div className="flex flex-wrap gap-4 justify-center lg:gap-8">
                     {
