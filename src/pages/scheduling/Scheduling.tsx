@@ -20,7 +20,7 @@ type DateType = {
 
 export default function Scheduling() {
     const emailRegex = new RegExp("^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$")
-
+    const [step, setStep] = useState(1)
     const [errorMsg, setErrorMsg] = useState("")
     const [terms, setTerms] = useState(false)
     const [scheduleDate, setScheduleDate] = useState<ScheduleType>({
@@ -47,11 +47,8 @@ export default function Scheduling() {
         return new Date(year, month, parseInt(day, 10));
     });
 
-    function handleSubmit(e: React.FormEvent) {
-        e.preventDefault();
-        const { name, email, service, date } = scheduleDate
-        const dateFormat: DateType = { year: 'numeric', month: 'numeric', day: 'numeric' };
-        const formatedDate = new Intl.DateTimeFormat('pt-BR', dateFormat);
+    function handleFirstStep() {
+
         if (terms === false) {
             setErrors({ ...errors, terms: true })
             setTimeout(() => {
@@ -78,7 +75,17 @@ export default function Scheduling() {
                 setErrors({ ...errors, email: false })
                 setErrorMsg("")
             }, 2000);
-        } else if (scheduleDate.service === "") {
+        } else {
+            setStep(step + 1)
+        }
+    }
+
+    function handleSubmit() {
+        const { name, email, service, date } = scheduleDate
+        const dateFormat: DateType = { year: 'numeric', month: 'numeric', day: 'numeric' };
+        const formatedDate = new Intl.DateTimeFormat('pt-BR', dateFormat);
+
+        if (scheduleDate.service === "") {
             setErrors({ ...errors, service: true })
             setErrorMsg("Selecione um tipo de serviço")
             setTimeout(() => {
@@ -104,86 +111,102 @@ export default function Scheduling() {
     }
 
     return (
-        <div className="" onSubmit={handleSubmit}>
-            <div className="my-6 flex flex-col items-center mx-auto max-w-[1250px] py-4 px-1 lg:px-6">
-                <h2 className="text-2xl mb-6 lg:text-3xl">Faça já seu agendamento</h2>
-                <form
-                    action=""
-                    className="bg-zinc-200 rounded-md flex flex-col gap-3 card-shadow py-8 px-2 w-full md:w-[600px] md:px-4 md:flex-row lg:w-[800px]"
-                >
-                    <div className="bg-zinc-200 flex-1 flex flex-col gap-3">
-                        <div className="bg-zinc-200">
-                            <input
-                                autoComplete="none"
-                                value={scheduleDate.name}
-                                onChange={e => setScheduleDate({ ...scheduleDate, name: e.target.value })}
-                                type="text"
-                                placeholder="Enter your Name"
-                                className={`capitalize bg-white p-2 w-full rounded-sm outline-none border ${errors.name && "border-red-500"}`}
-                            />
-                            {errors.name &&
-                                <p className="bg-zinc-200 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
-                            }
-                        </div>
-                        <div className="bg-zinc-200">
-                            <input
-                                value={scheduleDate.email}
-                                onChange={e => setScheduleDate({ ...scheduleDate, email: e.target.value })}
-                                type="email"
-                                placeholder="Enter your Email"
-                                className={`bg-white p-2 w-full rounded-sm outline-none border ${errors.email && "border-red-500"}`}
-                            />
-                            {errors.email &&
-                                <p className="bg-zinc-200 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
-                            }
-                        </div>
-                        <div className="bg-zinc-200">
-                            <select name="servicesSelect" title="Selecione" id="services" className={`outline-none bg-white py-2 border rounded-sm w-full ${errors.service && "border-red-500"}`} value={scheduleDate.service} onChange={e => setScheduleDate({ ...scheduleDate, service: e.target.value })}>
-                                <option value="" key="0">
-                                    Selecione
-                                </option>
-                                <option value="Torneamento CNC" key="1">
-                                    Torneamento CNC
-                                </option>
-                                <option value="Retífica Cilíndrica" key="2">
-                                    Retífica Cilíndrica
-                                </option>
-                                <option value="Prototipagem Rápida" key="3">
-                                    Prototipagem Rápida
-                                </option>
-                                <option value="Montagem e Inspeção" key="4">
-                                    Montagem e Inspeção
-                                </option>
-                                <option value="Consultoria Técnica" key="5">
-                                    Consultoria Técnica
-                                </option>
-                            </select>
-                            {errors.service &&
-                                <p className="bg-zinc-200 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
-                            }
-                        </div>
-                        <div className="bg-zinc-200">
-                            <input id='terms' onClick={() => setTerms(!terms)} type="checkbox" className="me-4" />
-                            <label htmlFor="terms" className={`bg-zinc-200 text-blue-500 ${errors.terms && "text-red-500"}`}>Aceito os termos e condições</label>
-                        </div>
+        <div className="mb-6 lg:min-h-[74vh]">
+            <div className="flex flex-col items-center mx-auto max-w-[1250px] py-4 px-1 lg:px-6">
+                <h2 className="text-2xl mb-6 lg:text-3xl">Agendamento fácil e rápido</h2>
+                <div className="w-full flex flex-col items-center bg-blue-100 p-6 card-shadow md:w-auto lg:rounded-md lg:py-2">
+                    {step === 2 && <div className="w-[300px] mx-auto mb-12 bg-blue-100 text-blue-950 font-bold md:mb-8">
+                        <button className="ps-[2px]" onClick={() => setStep(1)}>&larr;</button>
+                    </div>}
+                    {step === 1 &&
+                        <form
+                            action=""
+                            className="bg-blue-100 flex flex-col gap-3 mb-4  w-full md:w-[600px] md:flex-row">
+                            <div className="bg-blue-100 flex-1 flex flex-col gap-3">
+                                <div className="bg-blue-100 self-center">
+                                    <p className="bg-blue-100 text-blue-950 text-xl"></p>
+                                </div>
+                                <div className="bg-blue-100">
+                                    <label htmlFor="name" className="bg-blue-100 text-blue-950 font-bold">Nome</label>
+                                    <input
+                                        id="name"
+                                        autoComplete="none"
+                                        value={scheduleDate.name}
+                                        onChange={e => setScheduleDate({ ...scheduleDate, name: e.target.value })}
+                                        type="text"
+                                        placeholder="user"
+                                        className={`capitalize bg-white p-2 w-full rounded-md outline-none border ${errors.name && "border-red-500"}`}
+                                    />
+                                    {errors.name &&
+                                        <p className="bg-blue-100 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
+                                    }
+                                </div>
+                                <div className="bg-blue-100">
+                                    <label htmlFor="email" className="bg-blue-100 text-blue-950 font-bold">Email</label>
+                                    <input
+                                        id="email"
+                                        value={scheduleDate.email}
+                                        onChange={e => setScheduleDate({ ...scheduleDate, email: e.target.value })}
+                                        type="email"
+                                        placeholder="user@gmail.com"
+                                        className={`bg-white p-2 w-full rounded-md outline-none border ${errors.email && "border-red-500"}`}
+                                    />
+                                    {errors.email &&
+                                        <p className="bg-blue-100 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
+                                    }
+                                </div>
+                                <div className="bg-blue-100">
+                                    <label htmlFor="services" className="bg-blue-100 text-blue-950 font-bold">Tipo de serviço</label>
+                                    <select name="servicesSelect" title="Selecione" id="services" className={`outline-none bg-white py-2 border rounded-md w-full ${errors.service && "border-red-500"}`} value={scheduleDate.service} onChange={e => setScheduleDate({ ...scheduleDate, service: e.target.value })}>
+                                        <option value="" key="0">
+                                            Selecione
+                                        </option>
+                                        <option value="Torneamento CNC" key="1">
+                                            Torneamento CNC
+                                        </option>
+                                        <option value="Retífica Cilíndrica" key="2">
+                                            Retífica Cilíndrica
+                                        </option>
+                                        <option value="Prototipagem Rápida" key="3">
+                                            Prototipagem Rápida
+                                        </option>
+                                        <option value="Montagem e Inspeção" key="4">
+                                            Montagem e Inspeção
+                                        </option>
+                                        <option value="Consultoria Técnica" key="5">
+                                            Consultoria Técnica
+                                        </option>
+                                    </select>
+                                    {errors.service &&
+                                        <p className="bg-blue-100 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
+                                    }
+                                </div>
+                                <div className="bg-blue-100">
+                                    <input id='terms' checked={terms} onClick={() => setTerms(!terms)} type="checkbox" className="me-4" />
+                                    <label htmlFor="terms" className={`bg-blue-100 text-blue-500 ${errors.terms && "text-red-500"}`}>Aceito os termos e condições</label>
+                                </div>
+                            </div>
+                        </form>}
+                    {step === 2 &&
+                        <div className="self-center flex flex-col items-center bg-transparent ps-2 datepicker-container my-4">
+                            <div className="relative bg-blue-100 mb-4 scale-125">
+                                <DatePicker
+                                    inline
+                                    locale="pt-BR"
+                                    minDate={new Date()}
+                                    selected={scheduleDate.date}
+                                    excludeDates={excludeDates}
+                                    onChange={(dt) => setScheduleDate({ ...scheduleDate, date: dt })}
+                                />
+                                {errors.date &&
+                                    <p className="absolute bottom-[-10px] start-0 bg-blue-100 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
+                                }
+                            </div>
+                        </div>}
+                    <div className={`bg-blue-100 self-start ${step === 2 && "w-[300px] mx-auto"}`}>
+                        <button onClick={step === 1 ? handleFirstStep : handleSubmit} className={`py-2 px-6 self-start rounded-sm text-white ${terms === false ? "bg-blue-300" : "bg-blue-600 "}`}>{step === 1 ? "Avançar" : "Agendar"}</button>
                     </div>
-                    <div className="self-center flex flex-col bg-transparent ps-2 datepicker-container">
-                        <div className="relative">
-                            <DatePicker
-                                inline
-                                locale="pt-BR"
-                                minDate={new Date()}
-                                selected={scheduleDate.date}
-                                excludeDates={excludeDates}
-                                onChange={(dt) => setScheduleDate({ ...scheduleDate, date: dt })}
-                            />
-                            {errors.date &&
-                                <p className="absolute bottom-[-10px] start-0 bg-zinc-200 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
-                            }
-                        </div>
-                        <button className={`w-full mt-4 py-2 px-6 self-start rounded-sm text-white ${terms === false ? "bg-blue-300" : "bg-blue-600 "}`}>Agendar</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     );
