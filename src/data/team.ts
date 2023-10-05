@@ -1,7 +1,7 @@
-import engenheira from "../images/engenheira.jpg"
-import tecnico from "../images/tecnico.jpg"
-import gerente from "../images/gerenteDeControle.jpg"
-import logistica from "../images/logistica.jpg"
+import engenheira from "../images/team/engenheira.jpg"
+import tecnico from "../images/team/tecnico.jpg"
+import gerente from "../images/team/gerenteDeControle.jpg"
+import logistica from "../images/team/logistica.jpg"
 
 export type TeamType = {
     name: string,
