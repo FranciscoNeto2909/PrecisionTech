@@ -75,7 +75,15 @@ export default function Scheduling() {
                 setErrors({ ...errors, email: false })
                 setErrorMsg("")
             }, 2000);
-        } else {
+        } else if (scheduleDate.service === "") {
+            setErrors({ ...errors, service: true })
+            setErrorMsg("Selecione um tipo de serviço")
+            setTimeout(() => {
+                setErrors({ ...errors, service: false })
+                setErrorMsg("")
+            }, 2000);
+        }
+        else {
             setStep(step + 1)
         }
     }
@@ -85,14 +93,7 @@ export default function Scheduling() {
         const dateFormat: DateType = { year: 'numeric', month: 'numeric', day: 'numeric' };
         const formatedDate = new Intl.DateTimeFormat('pt-BR', dateFormat);
 
-        if (scheduleDate.service === "") {
-            setErrors({ ...errors, service: true })
-            setErrorMsg("Selecione um tipo de serviço")
-            setTimeout(() => {
-                setErrors({ ...errors, service: false })
-                setErrorMsg("")
-            }, 2000);
-        } else if (scheduleDate.date === null) {
+        if (scheduleDate.date === null) {
             setErrors({ ...errors, date: true })
             setErrorMsg("Selecione uma data")
             setTimeout(() => {
@@ -115,7 +116,7 @@ export default function Scheduling() {
             <div className="flex flex-col items-center mx-auto max-w-[1250px] py-4 px-1 lg:px-6">
                 <h2 className="text-2xl mb-6 lg:text-3xl">Agendamento fácil e rápido</h2>
                 <div className="w-full flex flex-col items-center bg-blue-100 p-6 card-shadow md:w-auto lg:rounded-md lg:py-2">
-                    {step === 2 && <div className="w-[300px] mx-auto mb-12 bg-blue-100 text-blue-950 font-bold md:mb-8">
+                    {step === 2 && <div className="w-[300px] mx-auto mb-6 bg-blue-100 text-blue-950 font-bold md:mb-8">
                         <button className="ps-[2px]" onClick={() => setStep(1)}>&larr;</button>
                     </div>}
                     {step === 1 &&
@@ -199,11 +200,11 @@ export default function Scheduling() {
                                     onChange={(dt) => setScheduleDate({ ...scheduleDate, date: dt })}
                                 />
                                 {errors.date &&
-                                    <p className="absolute bottom-[-10px] start-0 bg-blue-100 text-xs mt-1 ms-1 text-red-500">{errorMsg}</p>
+                                    <p className="absolute bottom-[-12px] end-0 bg-blue-100 text-xs text-red-500">{errorMsg}</p>
                                 }
                             </div>
                         </div>}
-                    <div className={`bg-blue-100 self-start ${step === 2 && "w-[300px] mx-auto"}`}>
+                    <div className={`bg-blue-100 self-start ps-[2px] mt-1 ${step === 2 && "w-[300px] mx-auto"}`}>
                         <button onClick={step === 1 ? handleFirstStep : handleSubmit} className={`py-2 px-6 self-start rounded-sm text-white ${terms === false ? "bg-blue-300" : "bg-blue-600 "}`}>{step === 1 ? "Avançar" : "Agendar"}</button>
                     </div>
                 </div>
