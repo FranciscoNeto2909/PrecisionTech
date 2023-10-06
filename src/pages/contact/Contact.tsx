@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
         <section className="bg-zinc-200">
-            <div className="h-[1fr] flex flex-col justify-between mx-auto bg-zinc-200 max-w-[1250px] py-3 px-1 lg:px-6">
+            <div className="flex flex-col justify-between mx-auto bg-zinc-200 max-w-[1250px] py-2 px-1 lg:px-6">
                 <form action="" className="bg-zinc-200 p-2 flex items-center flex-col gap-2 md:items-start">
                     <div className="w-full max-w-[400px]">
                         <input className="bg-white p-2 w-full outline-none" type="text" autoComplete="none" placeholder="Enter your Name" />

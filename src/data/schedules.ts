@@ -1,27 +1,32 @@
 export const schedules = [
     {
-        client: "Joe Siderato",
+        name: "Joe Siderato",
         date: "05/10/2023",
+        email:"joe123@gmail.com",
         service: "Retífica Cilíndrica"
     },
     {
-        client: "Marilha Duarte",
+        name: "Marilha Duarte",
         date: "10/10/2023",
+        email:"marilha@gmail.com",
         service: "Torneamento CNC"
     },
     {
-        client: "Klaus Batista",
+        name: "Klaus Batista",
         date: "11/10/2023",
+        email:"klaus12@gmail.com",
         service: "Consultoria Técnica"
     },
     {
-        client: "Hielena Costa",
+        name: "Hielena Costa",
         date: "12/10/2023",
+        email:"hielena@gmail.com",
         service: "Consultoria Técnica"
     },
     {
-        client: "Jose Silva",
+        name: "Jose Silva",
         date: "13/11/2023",
+        email:"jose@gmail.com",
         service: "Montagem e Inspeção"
     }
 ]

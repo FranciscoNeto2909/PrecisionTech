@@ -1,8 +1,10 @@
 import { useState } from "react";
+import axios from "axios";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { schedules } from "../../data/schedules";
 import ptBR from 'date-fns/locale/pt-BR';
+import { useNavigate } from "react-router-dom";
 registerLocale('pt-BR', ptBR);
 
 type ScheduleType = {
@@ -20,6 +22,8 @@ type DateType = {
 
 export default function Scheduling() {
     const emailRegex = new RegExp("^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$")
+    const navigate = useNavigate()
+
     const [step, setStep] = useState(1)
     const [errorMsg, setErrorMsg] = useState("")
     const [terms, setTerms] = useState(false)
@@ -48,7 +52,6 @@ export default function Scheduling() {
     });
 
     function handleFirstStep() {
-
         if (terms === false) {
             setErrors({ ...errors, terms: true })
             setTimeout(() => {
@@ -88,7 +91,7 @@ export default function Scheduling() {
         }
     }
 
-    function handleSubmit() {
+    async function handleSubmit() {
         const { name, email, service, date } = scheduleDate
         const dateFormat: DateType = { year: 'numeric', month: 'numeric', day: 'numeric' };
         const formatedDate = new Intl.DateTimeFormat('pt-BR', dateFormat);
@@ -102,12 +105,16 @@ export default function Scheduling() {
             }, 2000);
         }
         else {
-            console.log({
+            localStorage.setItem("client", name)
+            axios.post("https://precisiontech.onrender.com/schedules", {
                 name,
+                date: `${formatedDate.format(date as Date)}`,
                 email,
-                service,
-                date: `${formatedDate.format(date as Date)}`
+                service
             })
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
+            navigate("/")
         }
     }
 

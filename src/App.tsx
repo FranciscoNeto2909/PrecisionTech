@@ -14,6 +14,7 @@ import Contact from "./pages/contact/Contact";
 import NotFound from "./pages/NotFound";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
 export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function App() {
   useEffect(() => {
     AOS.init()
   }, [])
+
   return (
     <>
       {windowWidth < 992 ?
