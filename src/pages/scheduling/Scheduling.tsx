@@ -20,7 +20,11 @@ type DateType = {
     day: 'numeric'
 }
 
-export default function Scheduling() {
+type Props = {
+    setMessage: (e: string) => void
+}
+
+export default function Scheduling({ setMessage }: Props) {
     const emailRegex = new RegExp("^[_a-z0-9-]+([_a-z0-9-]+)*@[a-z0-9-]+([a-z0-9-]+).([a-z]{2,3})$")
     const navigate = useNavigate()
 
@@ -105,6 +109,7 @@ export default function Scheduling() {
             }, 2000);
         }
         else {
+            setMessage("Seu agendamento foi confirmado!")
             localStorage.setItem("client", name)
             axios.post("https://precisiontech.onrender.com/schedules", {
                 name,
@@ -113,7 +118,6 @@ export default function Scheduling() {
                 service
             })
                 .then(res => console.log(res))
-                .catch(err => console.log(err))
             navigate("/")
         }
     }
@@ -190,7 +194,7 @@ export default function Scheduling() {
                                     }
                                 </div>
                                 <div className="bg-blue-100">
-                                    <input id='terms' checked={terms} onClick={() => setTerms(!terms)} type="checkbox" className="me-4" />
+                                    <input id='terms' checked={terms} onClick={() => setTerms(!terms)} type="checkbox" className="me-4" readOnly />
                                     <label htmlFor="terms" className={`bg-blue-100 text-blue-500 ${errors.terms && "text-red-500"}`}>Aceito os termos e condições</label>
                                 </div>
                             </div>
